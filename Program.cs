@@ -12,6 +12,7 @@ namespace LINQProductReviewManagement
         public static void Main(string[] args)
         {
             Console.WriteLine("Welcome to LINQ Product Review Management Program.");
+
             List<ProductReview> productReviewList = new List<ProductReview>()
             {
             new ProductReview() { ProductId = 1, UserId = 1, Rating = 5, Review = "Good", isLike = true},
@@ -30,7 +31,7 @@ namespace LINQProductReviewManagement
             new ProductReview() { ProductId = 15, UserId = 3, Rating = 2, Review = "Bad", isLike = false },
 
             };
+            Management.TopThreeByRating(List);
         }
     }
 }
-    
