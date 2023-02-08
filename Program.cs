@@ -31,8 +31,9 @@ namespace ProductReviewManagement
             new ProductReview() { ProductId = 15, UserId = 3, Rating = 2, Review = "Bad", isLike = false },
 
             };
-            //Management.TopThreeByRating(List);
-            Management.RetrieveAllRecords(List);
+            //Management.TopThreeByRating(list);    
+            //Management.RetrieveAllRecords(list);
+            Management.retriveCountOfReviewForEachProductID(List);
 
         }
     }
