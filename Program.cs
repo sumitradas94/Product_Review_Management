@@ -1,4 +1,4 @@
-﻿using LINQ_ProductReviewManagement;
+﻿/*using LINQ_ProductReviewManagement;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -42,4 +42,4 @@ namespace ProductReviewManagement
 
         }
     }
-}
+}*/

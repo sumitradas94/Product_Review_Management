@@ -1,7 +1,6 @@
-﻿using LINQ_ProductReviewManagement;
-
+﻿
+/*
 namespace LINQ_ProductReviewManagement
-{
 
     public class Management
     {
@@ -72,4 +71,5 @@ namespace LINQ_ProductReviewManagement
         }
     }
 }
+*/
 
