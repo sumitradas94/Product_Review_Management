@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LINQProductReviewManagement
+namespace ProductReviewManagement
 {
     public class Program
     {
@@ -31,7 +31,9 @@ namespace LINQProductReviewManagement
             new ProductReview() { ProductId = 15, UserId = 3, Rating = 2, Review = "Bad", isLike = false },
 
             };
-            Management.TopThreeByRating(List);
+            //Management.TopThreeByRating(List);
+            Management.RetrieveAllRecords(List);
+
         }
     }
 }
