@@ -12,7 +12,7 @@ namespace LINQ_ProductReviewManagement
 
             foreach (var element in Record)
             {
-                Console.WriteLine("ProductID :{0}, UserID :{1}, Rating :{2}, Review :{3}, isLike :{4}", element.ProductId, element.UserID, element.Rating, element.Review, element.isLike);
+                Console.WriteLine("ProductID :{0}, UserID :{1}, Rating :{2}, Review :{3}, isLike :{4}", element.ProductId, element.UserId, element.Rating, element.Review, element.isLike);
             }
         }
 
@@ -26,7 +26,7 @@ namespace LINQ_ProductReviewManagement
 
             foreach (var element in Record)
             {
-                Console.WriteLine("ProductID :{0}, UserID :{1}, Rating :{2}, Review :{3}, isLike :{4}", element.ProductID, element.UserID, element.Rating, element.Review, element.isLike);
+                Console.WriteLine("ProductId :{0}, UserID :{1}, Rating :{2}, Review :{3}, isLike :{4}", element.ProductId, element.UserId, element.Rating, element.Review, element.isLike);
             }
         }
 
@@ -41,14 +41,35 @@ namespace LINQ_ProductReviewManagement
             }
         }
 
-        public static void retriveOnlyProductIDAndReview(List<ProductReview> productreview)
+        public static void retriveOnlyProductIDAndReview(List<ProductReview> productReview)
         {
-            var Record = from productReview in productreview select productreview;
+            var Records = from productreview in productReview select productreview;
 
-            foreach (var element in Record)
+            foreach (var element in Records)
             {
                 Console.WriteLine("ProductId :{0},  Review :{1}", element.ProductId, element.Review);
             }
         }
+
+        public static void skipTopFiveRecordAndDisplayOther(List<ProductReview> productReview)
+        {
+            var Records = (from productreview in productReview select productreview).Skip(5);
+
+            foreach (var element in Records)
+            {
+                Console.WriteLine("ProductId :{0},  Review :{1}", element.ProductId, element.Review);
+            }
+        }
+
+        public static void retriveOnlyProductIDAndReviewAllRecordsUsingSelect(List<ProductReview> ele)
+        {
+            var Records = ele.AsEnumerable().Select(x => new { ProductId = x.ProductId, review = x.Review });
+
+            foreach (var element in Records)
+            {
+                Console.WriteLine("ProductId :{0},  Review :{1}", element.ProductId, element.review);
+            }
+        }
     }
 }
+
