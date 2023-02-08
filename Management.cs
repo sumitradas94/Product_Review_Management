@@ -12,7 +12,7 @@ namespace LINQ_ProductReviewManagement
 
             foreach (var element in Record)
             {
-                Console.WriteLine("ProductID :{0}, UserID :{1}, Rating :{2}, Review :{3}, isLike :{4}", element.ProductId, element.UserId, element.Rating, element.Review, element.isLike);
+                Console.WriteLine("ProductID :{0}, UserID :{1}, Rating :{2}, Review :{3}, isLike :{4}", element.ProductId, element.UserID, element.Rating, element.Review, element.isLike);
             }
         }
 
@@ -26,7 +26,7 @@ namespace LINQ_ProductReviewManagement
 
             foreach (var element in Record)
             {
-                Console.WriteLine("ProductID :{0}, UserID :{1}, Rating :{2}, Review :{3}, isLike :{4}", element.ProductId, element.UserId, element.Rating, element.Review, element.isLike);
+                Console.WriteLine("ProductID :{0}, UserID :{1}, Rating :{2}, Review :{3}, isLike :{4}", element.ProductID, element.UserID, element.Rating, element.Review, element.isLike);
             }
         }
 
@@ -38,6 +38,16 @@ namespace LINQ_ProductReviewManagement
             foreach (var element in Record)
             {
                 Console.WriteLine("ProductId :{0}, Count :{1}", element.productid, element.count);
+            }
+        }
+
+        public static void retriveOnlyProductIDAndReview(List<ProductReview> productreview)
+        {
+            var Record = from productReview in productreview select productreview;
+
+            foreach (var element in Record)
+            {
+                Console.WriteLine("ProductId :{0},  Review :{1}", element.ProductId, element.Review);
             }
         }
     }

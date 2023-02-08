@@ -33,7 +33,9 @@ namespace ProductReviewManagement
             };
             //Management.TopThreeByRating(list);    
             //Management.RetrieveAllRecords(list);
-            Management.retriveCountOfReviewForEachProductID(List);
+            //Management.retriveCountOfReviewForEachProductID(list);
+            Management.retriveOnlyProductIDAndReview(list);
+
 
         }
     }
